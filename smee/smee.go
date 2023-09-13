@@ -35,6 +35,11 @@ func CreateChannelFromURL(newURL string) (*string, error) {
 	}
 
 	loc := resp.Header.Get("Location")
+	if loc == "" {
+		fmt.Println(fmt.Errorf("no Location header found"))
+		return &newURL, nil
+	}
+
 	return &loc, nil
 }
 
