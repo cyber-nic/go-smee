@@ -12,7 +12,7 @@ Based on previous work by [@cryptix](https://github.com/cryptix/goSSEClient) and
 Import:
 
 ```go
-import "github.com/jtyr/go-smee/smee"
+import "github.com/cyber-nic/go-smee/smee"
 ```
 
 Optionally create a new `smee.io` channel:

@@ -1,3 +1,3 @@
-module github.com/jtyr/go-smee
+module github.com/cyber-nic/go-smee
 
 go 1.17

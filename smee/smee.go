@@ -3,6 +3,7 @@ package smee
 import (
 	"bufio"
 	"bytes"
+	"crypto/tls"
 	"fmt"
 	"log"
 	"net/http"
@@ -19,6 +20,11 @@ func CreateChannel() (*string, error) {
 // CreateChannelFromURL creates a new channel on a specific server.
 func CreateChannelFromURL(newURL string) (*string, error) {
 	httpClient := http.Client{
+		Transport: &http.Transport{
+			TLSClientConfig: &tls.Config{
+				InsecureSkipVerify: true,
+			},
+		},
 		CheckRedirect: func(req *http.Request, via []*http.Request) error {
 			return http.ErrUseLastResponse
 		},

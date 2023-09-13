@@ -5,7 +5,7 @@ import (
 	"log"
 	"os"
 
-	"github.com/jtyr/go-smee/smee"
+	"github.com/cyber-nic/go-smee/smee"
 )
 
 func main() {
